@@ -72,3 +72,23 @@ body {
     height: 40px;
     outline: none;
 }
+
+#btn-confete {
+    background-color: #764ba2;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 10px rgba(118, 75, 162, 0.3);
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+#btn-confete:hover {
+    background-color: #667eea;
+    transform: scale(1.05); /* Dá uma leve aumentada quando passa o mouse */
+}

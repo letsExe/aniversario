@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Feliz Aniversário!</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Importando a biblioteca de confetes -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 </head>
 <body>
     <div class="card">
         <h1 class="bounce">🎉 Feliz Aniversário Rafaelaaa! 🎂</h1>
         
-        <!-- Nova seção para as imagens -->
         <div class="fotos">
             <img src="gojo.jpg" alt="Nossa foto especial 1">
             <img src="images.jpg" alt="Nossa foto especial 2">
@@ -19,13 +20,23 @@
         <p>Que hoje, dia 22, seja repleto de conquistas, alegria e muito código rodando de primeira!</p>
         <p class="signature">- Com carinho: Gojo Satoru e JeongKook</p>
 
-        <!-- Adição da música -->
+        <!-- Botão de Confete -->
+        <button id="btn-confete">🎊 Soltar Confetes!</button>
+
         <audio controls autoplay loop class="player">
             <source src="xuxa.mp3" type="audio/mpeg">
             Seu navegador não suporta o áudio.
         </audio>
     </div>
+
+    <script>
+        document.getElementById('btn-confete').addEventListener('click', function() {
+            confetti({
+                particleCount: 150, // Quantidade de confetes
+                spread: 80,         // O quanto eles se espalham
+                origin: { y: 0.6 }  // Altura de onde eles saem (0 é o topo, 1 é o final da tela)
+            });
+        });
+    </script>
 </body>
 </html>
-
-
